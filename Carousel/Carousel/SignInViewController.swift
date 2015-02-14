@@ -21,6 +21,9 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backArrow(sender: AnyObject) {
+        navigationController!.popViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

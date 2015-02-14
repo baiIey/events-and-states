@@ -21,6 +21,10 @@ class ExampleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backX(sender: AnyObject) {
+        navigationController!.popViewControllerAnimated(true)
+        
+    }
 
     /*
     // MARK: - Navigation
