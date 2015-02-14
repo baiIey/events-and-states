@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  ExampleViewController.swift
 //  Carousel
 //
 //  Created by Brian Bailey on 2/13/15.
@@ -8,16 +8,12 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class ExampleViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var settingsImage: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        scrollView.contentSize = settingsImage.frame.size
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,9 +21,6 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func backX(sender: AnyObject) {
-        navigationController!.popViewControllerAnimated(true)
-    }
 
     /*
     // MARK: - Navigation
