@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  ForgotPasswordViewController.swift
 //  Carousel
 //
 //  Created by Brian Bailey on 2/15/15.
@@ -8,21 +8,12 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController {
 
-    @IBOutlet weak var signInTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    // Sign In Group
-    @IBOutlet weak var signInImage: UIImageView!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var forgotPasswordButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        signInButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +22,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func backArrow(sender: AnyObject) {
-        navigationController!.popToRootViewControllerAnimated(true)
-    }
-    
-    @IBAction func didStartEditing(sender: AnyObject) {
-        if (signInTextField.text.isEmpty || passwordTextField.text.isEmpty){
-            //
-        } else {
-            signInButton.enabled = true
-        }
+        navigationController!.popViewControllerAnimated(true)
     }
 
     /*

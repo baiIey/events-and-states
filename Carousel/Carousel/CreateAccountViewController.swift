@@ -10,10 +10,21 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    //create a dropbox assets and button
+    @IBOutlet weak var createImage: UIImageView!
+    @IBOutlet weak var createButton: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        createButton.enabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +32,19 @@ class CreateAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backArrow(sender: AnyObject) {
+        navigationController!.popToRootViewControllerAnimated(true)
+    }
 
+    @IBAction func didStartEditing(sender: AnyObject) {
+        if (emailTextField.text.isEmpty || passwordTextField.text.isEmpty || confirmPasswordTextField.text.isEmpty){
+            createButton.enabled = false
+        } else {
+            createButton.enabled = true
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
