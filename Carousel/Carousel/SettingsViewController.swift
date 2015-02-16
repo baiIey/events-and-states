@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIActionSheetDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var settingsImage: UIImageView!
@@ -29,6 +29,18 @@ class SettingsViewController: UIViewController {
         navigationController!.popViewControllerAnimated(true)
     }
 
+    @IBAction func signOut(sender: AnyObject) {
+//navigationController!.popToRootViewControllerAnimated(true)
+    var actionSheet = UIActionSheet(title: "Are you sure?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Logout")
+        actionSheet.showInView(view)
+    }
+    
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+        if (buttonIndex == 0) {
+            navigationController!.popToRootViewControllerAnimated(true)
+        } 
+    }
+    
     /*
     // MARK: - Navigation
 

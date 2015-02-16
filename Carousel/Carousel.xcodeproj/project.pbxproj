@@ -22,6 +22,7 @@
 		70814B441A8EF454007881CA /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70814B431A8EF454007881CA /* ExampleViewController.swift */; };
 		70E2274E1A919B6A00DD6152 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */; };
 		70E227521A919DF300DD6152 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E227511A919DF300DD6152 /* SignInViewController.swift */; };
+		70E227541A91CD1900DD6152 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E227531A91CD1900DD6152 /* GetStartedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		70814B431A8EF454007881CA /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		70E227511A919DF300DD6152 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		70E227531A91CD1900DD6152 /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				70171EBC1A8A7EAF00EF2334 /* ViewController.swift */,
 				700BE0671A8D74710000E9CF /* Common.swift */,
 				70171EBE1A8A7EAF00EF2334 /* Main.storyboard */,
+				70E227531A91CD1900DD6152 /* GetStartedViewController.swift */,
 				70E227511A919DF300DD6152 /* SignInViewController.swift */,
 				70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */,
 				70814B431A8EF454007881CA /* ExampleViewController.swift */,
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E227541A91CD1900DD6152 /* GetStartedViewController.swift in Sources */,
 				70814B441A8EF454007881CA /* ExampleViewController.swift in Sources */,
 				70814B381A8D7E0E007881CA /* CreateAccountViewController.swift in Sources */,
 				70814B401A8EEB0D007881CA /* FeedViewController.swift in Sources */,
