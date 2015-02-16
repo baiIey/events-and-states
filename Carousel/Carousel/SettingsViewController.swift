@@ -29,17 +29,17 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
         navigationController!.popViewControllerAnimated(true)
     }
 
-    @IBAction func signOut(sender: AnyObject) {
+//    @IBAction func signOut(sender: AnyObject) {
 //navigationController!.popToRootViewControllerAnimated(true)
-    var actionSheet = UIActionSheet(title: "Are you sure?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Logout")
-        actionSheet.showInView(view)
-    }
-    
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
-        if (buttonIndex == 0) {
-            navigationController!.popToRootViewControllerAnimated(true)
-        } 
-    }
+//    var actionSheet = UIActionSheet(title: "Are you sure?", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Logout")
+//        actionSheet.showInView(view)
+//    }
+//    
+//    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+//        if (buttonIndex == 0) {
+//            navigationController!.popToRootViewControllerAnimated(true)
+//        } 
+//    }
     
     /*
     // MARK: - Navigation

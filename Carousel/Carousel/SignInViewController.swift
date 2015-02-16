@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UIAlertViewDelegate {
 
     @IBOutlet weak var signInTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -42,12 +42,18 @@ class SignInViewController: UIViewController {
     
     @IBAction func didStartEditing(sender: AnyObject) {
         if (signInTextField.text.isEmpty || passwordTextField.text.isEmpty){
-            //
+            var alertView = UIAlertView(title: "Email Address Required", message: "Please enter email and password", delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
         } else {
             signInButton.enabled = true
         }
     }
 
+    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+        // buttonIndex is 0 for Cancel
+        // buttonIndex ranges from 1-n for the other buttons.
+    }
+    
     func keyboardWillShow(notification: NSNotification!) {
         var userInfo = notification.userInfo!
         
