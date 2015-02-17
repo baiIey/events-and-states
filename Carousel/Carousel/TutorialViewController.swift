@@ -17,6 +17,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var welcome4Image: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var backUpPhotosButton: UIButton!
+    @IBOutlet weak var buttonContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,22 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
+        
+        if (page == 3){
+            // println("on page 4")
+            UIView.animateWithDuration(0.7, animations: { () -> Void in
+                self.pageControl.alpha = 0
+                self.buttonContainer.alpha = 1
+            })
+            
+            
+        } else {
+            //println("not on page 4")
+            UIView.animateWithDuration(0.7, animations: { () -> Void in
+                self.pageControl.alpha = 1
+                self.buttonContainer.alpha = 0
+            })
+        }
         
     }
 
