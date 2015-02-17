@@ -66,6 +66,11 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         // buttonIndex ranges from 1-n for the other buttons.
     }
     
+    func alertViewLoggingIn(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+        // buttonIndex is 0 for Cancel
+        // buttonIndex ranges from 1-n for the other buttons.
+    }
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -77,13 +82,27 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     
     @IBAction func signInDidPress(sender: AnyObject) {
         if (signInTextField.text.isEmpty){
+            // if Sign In Field is empty, display Enter Email Address alert
             var alertViewEmail = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: nil, cancelButtonTitle: "OK")
             alertViewEmail.show()
-        } else if (passwordTextField.text == "password") {
-            performSegueWithIdentifier("signInSegue", sender: self)
         } else {
-            var alertViewFailed = UIAlertView(title: "Login Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
-            alertViewFailed.show()
+            // otherwise, do show Sign In alert and check
+            var alertViewLoading = UIAlertView(title: "Signing In", message: nil, delegate: nil, cancelButtonTitle: nil)
+            alertViewLoading.show()
+            delay(1, closure: { () -> () in
+                // dismiss loading screen
+                alertViewLoading.dismissWithClickedButtonIndex(0, animated: true)
+                // check if password is password
+                if (self.passwordTextField.text == "password") {
+                    self.performSegueWithIdentifier("signInSegue", sender: self)
+                } else {
+                    //wrong password alert
+                    var alertViewFailed = UIAlertView(title: "Login Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
+                    alertViewFailed.show()
+                }
+            })
+
+            
         }
     }
     
