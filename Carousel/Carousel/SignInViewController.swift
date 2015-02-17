@@ -21,11 +21,18 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     
+    var signInContainerInitialPosition : CGFloat!
+    var loginContainerInitialPosition : CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Initialize by turning off button and declaring starting positions for containers
         signInButton.enabled = false
+        signInContainerInitialPosition = signInContainer.center.y
+        loginContainerInitialPosition = loginContainer.center.y
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
@@ -88,8 +95,8 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
             
-            self.signInContainer.center.y = 500
-            self.loginContainer.center.y = 130
+            self.signInContainer.center.y = self.signInContainerInitialPosition
+            self.loginContainer.center.y = self.loginContainerInitialPosition
             
             // Set view properties in here that you want to match with the animation of the keyboard
             // If you need it, you can use the kbSize property above to get the keyboard width and height.
