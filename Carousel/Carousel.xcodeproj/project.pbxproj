@@ -190,7 +190,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "i had that dream again";
+				ORGANIZATIONNAME = nevver;
 				TargetAttributes = {
 					70171EB41A8A7EAF00EF2334 = {
 						CreatedOnToolsVersion = 6.1.1;

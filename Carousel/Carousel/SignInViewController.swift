@@ -30,7 +30,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         // Do any additional setup after loading the view.
         
         // Initialize by turning off button and declaring starting positions for containers
-        signInButton.enabled = false
+        // signInButton.enabled = false
         signInContainerInitialPosition = signInContainer.center.y
         loginContainerInitialPosition = loginContainer.center.y
         
@@ -49,18 +49,47 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     }
     
     @IBAction func didStartEditing(sender: AnyObject) {
-        if (signInTextField.text.isEmpty || passwordTextField.text.isEmpty){
-            signInButton.enabled = false
-        } else {
-            signInButton.enabled = true
-        }
+//        if (signInTextField.text.isEmpty || passwordTextField.text.isEmpty){
+//            signInButton.enabled = false
+//        } else {
+//            signInButton.enabled = true
+//        }
     }
 
-    func alertView(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+    func alertViewEmail(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
         // buttonIndex is 0 for Cancel
         // buttonIndex ranges from 1-n for the other buttons.
     }
     
+    func alertViewFailed(alertView: UIAlertView!, clickedButtonAtIndex buttonIndex: Int) {
+        // buttonIndex is 0 for Cancel
+        // buttonIndex ranges from 1-n for the other buttons.
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    @IBAction func signInDidPress(sender: AnyObject) {
+        if (signInTextField.text.isEmpty){
+            var alertViewEmail = UIAlertView(title: "Email Required", message: "Please enter your email address", delegate: nil, cancelButtonTitle: "OK")
+            alertViewEmail.show()
+        } else if (passwordTextField.text == "password") {
+            performSegueWithIdentifier("signInSegue", sender: self)
+        } else {
+            var alertViewFailed = UIAlertView(title: "Login Failed", message: "Incorrect email or password", delegate: nil, cancelButtonTitle: "OK")
+            alertViewFailed.show()
+        }
+    }
+    
+
+    
+    // animation properties for showing keyboard
     func keyboardWillShow(notification: NSNotification!) {
         var userInfo = notification.userInfo!
         
@@ -74,6 +103,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
             
+            // moves containers up to new position
             self.signInContainer.center.y = 250
             self.loginContainer.center.y = 120
             
@@ -82,6 +112,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
             }, completion: nil)
     }
     
+    // animation for hiding keyboard
     func keyboardWillHide(notification: NSNotification!) {
         var userInfo = notification.userInfo!
         
@@ -95,6 +126,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
             
+            // moves containers back to origin
             self.signInContainer.center.y = self.signInContainerInitialPosition
             self.loginContainer.center.y = self.loginContainerInitialPosition
             

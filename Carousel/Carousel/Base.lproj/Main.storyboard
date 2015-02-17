@@ -122,7 +122,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3O7-M0-phj" kind="push" id="ym0-MS-Ega"/>
+                                            <action selector="signInDidPress:" destination="5xR-rQ-uQG" eventType="touchUpInside" id="x9k-mc-mXV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7RC-Rp-8Xg">
@@ -184,6 +184,7 @@
                         <outlet property="signInContainer" destination="76d-sh-kMg" id="eSu-rD-oau"/>
                         <outlet property="signInImage" destination="KEE-gn-0hH" id="GuP-jx-ld6"/>
                         <outlet property="signInTextField" destination="zPu-yS-wQq" id="PoB-7Z-auJ"/>
+                        <segue destination="3O7-M0-phj" kind="push" identifier="signInSegue" id="449-tl-f7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cy5-cm-sCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -712,23 +713,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOE-jB-xsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="-122"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="miC-zO-Dpg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vua-16-zbd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="hqV-cb-6Aa"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ecz-av-mkT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WWc-Cu-rPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="795" y="-122"/>
+            <point key="canvasLocation" x="794" y="-122"/>
         </scene>
     </scenes>
     <resources>
@@ -775,6 +760,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uUT-ck-iPj"/>
+        <segue reference="449-tl-f7P"/>
     </inferredMetricsTieBreakers>
 </document>
