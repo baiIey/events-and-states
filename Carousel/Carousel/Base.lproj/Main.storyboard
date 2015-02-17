@@ -550,20 +550,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_nav" id="Pyg-Zh-TwS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_text" id="Qfa-Ia-eim">
+                                <rect key="frame" x="0.0" y="74" width="320" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dZs-mK-14z" userLabel="back arrow">
-                                <rect key="frame" x="10" y="28" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backArrow:" destination="QOc-Bw-wGT" eventType="touchUpInside" id="oFF-N1-Ewd"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" id="ugd-hK-e4t" userLabel="Form Container">
                                 <rect key="frame" x="-20" y="144" width="360" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -642,22 +632,32 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_text" id="Qfa-Ia-eim">
-                                <rect key="frame" x="0.0" y="88" width="320" height="63"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="create_nav" id="Pyg-Zh-TwS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dZs-mK-14z" userLabel="back arrow">
+                                <rect key="frame" x="10" y="28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backArrow:" destination="QOc-Bw-wGT" eventType="touchUpInside" id="oFF-N1-Ewd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sje-CY-zjW"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="jXB-5c-o6t" id="Tmb-Vx-AHL"/>
-                        <outlet property="createAccountContainer" destination="ugd-hK-e4t" id="aog-Rz-0Y5"/>
                         <outlet property="createButton" destination="SJf-lR-kBN" id="9oo-7i-ZoO"/>
                         <outlet property="createImage" destination="TXH-Iv-cEB" id="6aK-KU-Ts6"/>
                         <outlet property="emailTextField" destination="DKK-Mo-COm" id="cor-qL-rzL"/>
                         <outlet property="formContainer" destination="ugd-hK-e4t" id="7Y8-BG-IY8"/>
                         <outlet property="passwordTextField" destination="ScY-nk-zJW" id="2Oc-mt-beN"/>
+                        <outlet property="submitContainer" destination="RC2-JX-ng1" id="gGU-tp-LPl"/>
                         <outlet property="termsCheckbox" destination="PSJ-1F-qPj" id="ApN-sn-dhG"/>
                         <outlet property="text" destination="Qfa-Ia-eim" id="9ZX-Ev-t82"/>
                     </connections>
@@ -775,6 +775,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ym0-MS-Ega"/>
+        <segue reference="uUT-ck-iPj"/>
     </inferredMetricsTieBreakers>
 </document>

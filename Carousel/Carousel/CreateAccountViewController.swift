@@ -14,21 +14,25 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var createAccountContainer: UIView!
     @IBOutlet weak var formContainer: UIView!
     @IBOutlet weak var text: UIImageView!
+    @IBOutlet weak var submitContainer: UIView!
     
     //create a dropbox assets and button
     @IBOutlet weak var createImage: UIImageView!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var termsCheckbox: UIButton!
-
+    
+    var createAccountContainerOrigin : CGFloat!
+    var formContainerOrigin : CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         createButton.enabled = false
+        createAccountContainerOrigin = submitContainer.center.y
+        formContainerOrigin = formContainer.center.y
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
@@ -64,9 +68,8 @@ class CreateAccountViewController: UIViewController {
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
             
-            self.text.center.y = -40
-            self.formContainer.center.y = 35
-            self.createAccountContainer.center.y = 120
+            self.formContainer.center.y = 150
+            self.submitContainer.center.y = 250
             
             // Set view properties in here that you want to match with the animation of the keyboard
             // If you need it, you can use the kbSize property above to get the keyboard width and height.
@@ -86,9 +89,8 @@ class CreateAccountViewController: UIViewController {
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
             
-            self.text.center.y = 100
-            self.formContainer.center.y = -35
-            self.createAccountContainer.center.y = 100
+            self.formContainer.center.y = self.formContainerOrigin
+            self.submitContainer.center.y = self.createAccountContainerOrigin
 
             
             // Set view properties in here that you want to match with the animation of the keyboard
