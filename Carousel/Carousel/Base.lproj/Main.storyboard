@@ -260,11 +260,11 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="backup_button" id="zXe-Ch-dZh">
-                                        <rect key="frame" x="960" y="464" width="320" height="97"/>
+                                        <rect key="frame" x="960" y="436" width="320" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6cG-TU-AJN">
-                                        <rect key="frame" x="981" y="507" width="278" height="46"/>
+                                        <rect key="frame" x="981" y="479" width="278" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -273,14 +273,33 @@
                                             <segue destination="drP-lz-Ofr" kind="push" id="bfd-9N-ujR"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Pg-DK-B9E">
+                                        <rect key="frame" x="1239" y="439" width="20" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="check_box">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="check_box_selected"/>
+                                        <connections>
+                                            <action selector="backUpPhotosButtonDidPress:" destination="3O7-M0-phj" eventType="touchUpInside" id="9hd-sP-lzG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="BzH-8G-hYi">
+                                <rect key="frame" x="121" y="530" width="78" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="currentPageIndicatorTintColor" red="0.33127934149999999" green="0.64497880019999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NIx-0g-fID"/>
                     <connections>
+                        <outlet property="backUpPhotosButton" destination="5Pg-DK-B9E" id="8ju-31-Ntz"/>
                         <outlet property="horzScrollView" destination="xsK-gL-L1X" id="o41-jA-6Zh"/>
+                        <outlet property="pageControl" destination="BzH-8G-hYi" id="obI-MR-nRX"/>
                         <outlet property="welcome1Image" destination="mcp-cU-mvy" id="I8u-9g-dl4"/>
                         <outlet property="welcome2Image" destination="Wgy-S3-Ww9" id="YyH-tP-RtP"/>
                         <outlet property="welcome3Image" destination="Bs9-mv-X5Y" id="BGZ-bQ-KxB"/>
@@ -762,6 +781,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uUT-ck-iPj"/>
+        <segue reference="ym0-MS-Ega"/>
     </inferredMetricsTieBreakers>
 </document>

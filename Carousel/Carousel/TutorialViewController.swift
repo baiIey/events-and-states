@@ -8,16 +8,20 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var horzScrollView: UIScrollView!
     @IBOutlet weak var welcome1Image: UIImageView!
     @IBOutlet weak var welcome2Image: UIImageView!
     @IBOutlet weak var welcome3Image: UIImageView!
     @IBOutlet weak var welcome4Image: UIImageView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var backUpPhotosButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        horzScrollView.delegate = self
 
         // Do any additional setup after loading the view.
         horzScrollView.contentSize = CGSize(width: 1280, height: 568)
@@ -28,7 +32,19 @@ class TutorialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView!) {
+        // Get the current page based on the scroll offset
+        var page : Int = Int(round(scrollView.contentOffset.x / 320))
+        
+        // Set the current page, so the dots will update
+        pageControl.currentPage = page
+        
+    }
 
+    @IBAction func backUpPhotosButtonDidPress(sender: AnyObject) {
+        backUpPhotosButton.selected = !backUpPhotosButton.selected
+    }
+    
     /*
     // MARK: - Navigation
 
