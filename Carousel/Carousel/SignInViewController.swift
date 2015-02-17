@@ -42,8 +42,7 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
     
     @IBAction func didStartEditing(sender: AnyObject) {
         if (signInTextField.text.isEmpty || passwordTextField.text.isEmpty){
-            var alertView = UIAlertView(title: "Email Address Required", message: "Please enter email and password", delegate: self, cancelButtonTitle: "OK")
-            alertView.show()
+            signInButton.enabled = false
         } else {
             signInButton.enabled = true
         }

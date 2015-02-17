@@ -1,24 +1,19 @@
 //
-//  IntroViewController.swift
+//  TermsViewController.swift
 //  Carousel
 //
-//  Created by Brian Bailey on 2/12/15.
+//  Created by Brian Bailey on 2/16/15.
 //  Copyright (c) 2015 i had that dream again. All rights reserved.
 //
 
 import UIKit
 
-class IntroViewController: UIViewController {
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var introImage: UIImageView!
-    
+class TermsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        scrollView.contentSize = introImage.frame.size
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +21,11 @@ class IntroViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func doneButtonDidPress(sender: AnyObject) {
+        // pressing done button goes back to previous view
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

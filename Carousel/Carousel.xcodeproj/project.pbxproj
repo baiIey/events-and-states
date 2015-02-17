@@ -20,6 +20,7 @@
 		70814B401A8EEB0D007881CA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70814B3F1A8EEB0D007881CA /* FeedViewController.swift */; };
 		70814B421A8EF226007881CA /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70814B411A8EF226007881CA /* ConversationViewController.swift */; };
 		70814B441A8EF454007881CA /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70814B431A8EF454007881CA /* ExampleViewController.swift */; };
+		70DB4B231A93243200A50AFB /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB4B221A93243200A50AFB /* TermsViewController.swift */; };
 		70E2274E1A919B6A00DD6152 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */; };
 		70E227521A919DF300DD6152 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E227511A919DF300DD6152 /* SignInViewController.swift */; };
 		70E227541A91CD1900DD6152 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E227531A91CD1900DD6152 /* GetStartedViewController.swift */; };
@@ -53,6 +54,7 @@
 		70814B3F1A8EEB0D007881CA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		70814B411A8EF226007881CA /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		70814B431A8EF454007881CA /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		70DB4B221A93243200A50AFB /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		70E227511A919DF300DD6152 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		70E227531A91CD1900DD6152 /* GetStartedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				70171EBC1A8A7EAF00EF2334 /* ViewController.swift */,
 				700BE0671A8D74710000E9CF /* Common.swift */,
 				70171EBE1A8A7EAF00EF2334 /* Main.storyboard */,
+				70DB4B221A93243200A50AFB /* TermsViewController.swift */,
 				70E227531A91CD1900DD6152 /* GetStartedViewController.swift */,
 				70E227511A919DF300DD6152 /* SignInViewController.swift */,
 				70E2274D1A919B6A00DD6152 /* ForgotPasswordViewController.swift */,
@@ -247,6 +250,7 @@
 				70814B401A8EEB0D007881CA /* FeedViewController.swift in Sources */,
 				70814B421A8EF226007881CA /* ConversationViewController.swift in Sources */,
 				70814B3C1A8D8976007881CA /* TutorialViewController.swift in Sources */,
+				70DB4B231A93243200A50AFB /* TermsViewController.swift in Sources */,
 				70171EBD1A8A7EAF00EF2334 /* ViewController.swift in Sources */,
 				700BE0681A8D74710000E9CF /* Common.swift in Sources */,
 				70E2274E1A919B6A00DD6152 /* ForgotPasswordViewController.swift in Sources */,

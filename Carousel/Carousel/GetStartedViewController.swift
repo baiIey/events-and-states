@@ -9,10 +9,10 @@
 import UIKit
 
 class GetStartedViewController: UIViewController {
-
-    @IBOutlet weak var firstCheck: UIImageView!
-    @IBOutlet weak var secondCheck: UIImageView!
-    @IBOutlet weak var thirdCheck: UIImageView!
+    
+    @IBOutlet weak var viewButton: UIButton!
+    @IBOutlet weak var timeWheelButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +25,6 @@ class GetStartedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func xButton(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    @IBAction func firstButton(sender: AnyObject) {
-    }
-    
-    @IBAction func secondButton(sender: AnyObject) {
-    }
-    
-    
-    @IBAction func thirdButton(sender: AnyObject) {
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -48,5 +34,20 @@ class GetStartedViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func xButtonDidPress(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    @IBAction func viewButtonDidPress(sender: AnyObject) {
+        viewButton.selected = !viewButton.selected
+    }
+    
+    @IBAction func timeWheelButtonDidPress(sender: AnyObject) {
+        timeWheelButton.selected = !timeWheelButton.selected
+    }
+    
+    @IBAction func shareButtonDidPress(sender: AnyObject) {
+        shareButton.selected = !shareButton.selected
+    }
 }

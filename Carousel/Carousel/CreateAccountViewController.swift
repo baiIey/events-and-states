@@ -21,6 +21,7 @@ class CreateAccountViewController: UIViewController {
     //create a dropbox assets and button
     @IBOutlet weak var createImage: UIImageView!
     @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var termsCheckbox: UIButton!
 
     
     override func viewDidLoad() {
@@ -93,6 +94,10 @@ class CreateAccountViewController: UIViewController {
             // Set view properties in here that you want to match with the animation of the keyboard
             // If you need it, you can use the kbSize property above to get the keyboard width and height.
             }, completion: nil)
+    }
+    
+    @IBAction func termsCheckboxDidPress(sender: AnyObject) {
+        termsCheckbox.selected = !termsCheckbox.selected
     }
     
     /*

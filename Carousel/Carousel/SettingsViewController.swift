@@ -28,6 +28,7 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
     @IBAction func backX(sender: AnyObject) {
         navigationController!.popViewControllerAnimated(true)
     }
+    
 
 //    @IBAction func signOut(sender: AnyObject) {
 //navigationController!.popToRootViewControllerAnimated(true)
