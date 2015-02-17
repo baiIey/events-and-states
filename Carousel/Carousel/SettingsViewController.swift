@@ -29,6 +29,10 @@ class SettingsViewController: UIViewController, UIActionSheetDelegate {
         navigationController!.popViewControllerAnimated(true)
     }
     
+//    // Annoyed that this doesn't work
+//    @IBAction func signOutButton(sender: AnyObject) {
+//        navigationController!.popToRootViewControllerAnimated(true)
+//    }
 
 //    @IBAction func signOut(sender: AnyObject) {
 //navigationController!.popToRootViewControllerAnimated(true)
