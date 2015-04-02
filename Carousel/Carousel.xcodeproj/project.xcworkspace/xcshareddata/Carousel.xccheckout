@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0EABBF8F-B29F-4589-A365-117D43E17A42</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Carousel</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2DCC7167A7C30FC2822D013A82915BAA737987C8</key>
+		<string>https://github.com/baiIey/events-and-states.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Carousel/Carousel.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2DCC7167A7C30FC2822D013A82915BAA737987C8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/baiIey/events-and-states.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2DCC7167A7C30FC2822D013A82915BAA737987C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2DCC7167A7C30FC2822D013A82915BAA737987C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>events-and-states</string>
+		</dict>
+	</array>
+</dict>
+</plist>
