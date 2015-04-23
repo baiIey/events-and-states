@@ -114,10 +114,10 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         
         // Get the keyboard height and width from the notification
         // Size varies depending on OS, language, orientation
-        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
-        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
         var animationDuration = durationValue.doubleValue
-        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
@@ -137,10 +137,10 @@ class SignInViewController: UIViewController, UIAlertViewDelegate {
         
         // Get the keyboard height and width from the notification
         // Size varies depending on OS, language, orientation
-        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue().size
-        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
         var animationDuration = durationValue.doubleValue
-        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as NSNumber
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
         var animationCurve = curveValue.integerValue
         
         UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
